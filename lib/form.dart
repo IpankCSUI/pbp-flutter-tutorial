@@ -27,6 +27,7 @@ class _MyFormPageState extends State<MyFormPage> {
                 title: Text('Form'),
             ),
             drawer: Drawer(
+              backgroundColor: Colors.yellow,
               child: Column(
                 children: [
                   // Menambahkan clickable menu
@@ -212,10 +213,10 @@ class _MyFormPageState extends State<MyFormPage> {
                       TextButton(
                         child: const Text(
                           "Simpan",
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: Colors.black),
                         ),
                         style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all(Colors.blue),
+                          backgroundColor: MaterialStateProperty.all(Colors.yellow),
                         ),
                         onPressed: () {
                           if (_formKey.currentState!.validate()) {

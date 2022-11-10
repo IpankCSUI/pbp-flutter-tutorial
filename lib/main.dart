@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
         title: 'Lab 7',
         theme: ThemeData(
-            primarySwatch: Colors.blue,
+            primarySwatch: Colors.yellow,
         ),
         home: const MyHomePage(),
         );
@@ -56,6 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       // Menambahkan drawer menu
       drawer: Drawer(
+        backgroundColor: Colors.yellow,
           child: Column(
             children: [
               // Menambahkan clickable menu
