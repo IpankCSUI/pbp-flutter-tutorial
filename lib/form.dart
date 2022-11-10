@@ -223,6 +223,16 @@ class _MyFormPageState extends State<MyFormPage> {
                             showDialog(
                               context: context,
                               builder: (context) {
+                                String jenjang = '';
+                                  jenjangSarjana
+                                      ? jenjang = 'Sarjana'
+                                      : jenjangDiploma
+                                          ? jenjang = 'Diploma'
+                                          : jenjangMagister
+                                              ? jenjang = 'Magister'
+                                              : jenjangDoktor
+                                                  ? jenjang = 'Doktor'
+                                                  : null;
                                 return Dialog(
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(10),
@@ -236,15 +246,11 @@ class _MyFormPageState extends State<MyFormPage> {
                                         Center(child: const Text('Informasi Data')),
                                         SizedBox(height: 20),
                                         // TODO: Munculkan informasi yang didapat dari form
-                                        Text(
-                                          'Nama: ' + '$_namaLengkap'
-                                        ),
-                                        Text(
-                                          'Umur: ' + '$umur'
-                                        ),
-                                        Text(
-                                          'Kelas PBP: ' + '$kelasPBP'
-                                        ),
+                                        Text('Nama : $_namaLengkap'),
+                                        Text('Umur : $umur'),
+                                        Text('Jenjang : $jenjang'),
+                                        Text('Kelas PBP : $kelasPBP'),
+                                        Text('Practice Mode : $_nilaiSwitch'),
                                         TextButton(
                                           onPressed: () {
                                             Navigator.pop(context);
